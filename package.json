@@ -1,7 +1,7 @@
 {
   "name": "hotelapp",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Front end for the hotel app",
   "author": "Samuel Adesoga <samuel@thoughstudiong.com>",
   "private": true,
   "scripts": {
