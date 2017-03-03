@@ -23,14 +23,14 @@ module Api
 		end
 
 		def destroy
-      		employee = Employee.find(params[:id])
-      		employee.destroy
+      		hotel = Hotel.find(params[:id])
+      		hotel.destroy
     	end
     
     	private
 
-    	def employee_params
-      		params.require(:employee).permit(:name, :email, :manager)
+    	def hotel_params
+      		params.require(:hotel).permit(:name, :address, :phone, :contact_person, :email)
 		end
 	end
 end
