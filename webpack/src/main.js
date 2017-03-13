@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import HotelDetail from './components/HotelDetail'
+import HotelIndex from './components/HotelIndex'
 
 import VueRouter from 'vue-router'
 
@@ -9,7 +10,8 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
     { path: '/', component: App },
-    { name: 'hotel', path: 'hotel/:id', component: HotelDetail },
+    { path: '/hotels', component: HotelIndex },
+    { name: 'hotel', path: '/hotel/:id', component: HotelDetail },
     { path: '*', redirect: '/' }
   ]
 })

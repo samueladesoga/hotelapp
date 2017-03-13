@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <a href="https://http://rubyonrails.org/" target="_blank" title="Rails">
-      <img src="./assets/vue.png" height="50">
-    </a>
-    <a href="https://vuejs.org" target="_blank" title="Vue">
-      <img src="./assets/rails.svg" height="50">
-    </a>
-    <hotel-index></hotel-index>
+    <header class="header">
+      <nav class="inner">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/hotels">Hotels</router-link>
+      </nav>
+    </header>
+    <router-view></router-view>
   </div>
 </template>
 
