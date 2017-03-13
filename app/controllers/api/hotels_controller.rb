@@ -22,6 +22,11 @@ module Api
 			end
 		end
 
+		def show
+			hotel = Hotel.find(params[:id])
+			render :json => hotel 
+		end
+
 		def destroy
       		hotel = Hotel.find(params[:id])
       		hotel.destroy

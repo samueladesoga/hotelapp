@@ -37,6 +37,7 @@
       <div v-else>{{ hotel.email }}</div>
     </td>
     <td>
+      <router-link :to="{ name: 'hotel', params: { id: hotel.id }}">View Details</router-link>
       <!-- Save button calls updateHotel -->
       <button v-if="editMode" @click="updateHotel">Save</button>
       <!-- Edit button puts row into edit mode -->

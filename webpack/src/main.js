@@ -1,17 +1,21 @@
 import Vue from 'vue'
 import App from './App'
+import HotelDetail from './components/HotelDetail'
 
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
 
-Vue.use(VueResource)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
     { path: '/', component: App },
+    { name: 'hotel', path: 'hotel/:id', component: HotelDetail },
     { path: '*', redirect: '/' }
   ]
 })
 
-new Vue({router}).$mount('#app')
+/* eslint-disable no-unused-vars */
+const app = new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

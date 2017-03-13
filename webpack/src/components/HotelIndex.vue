@@ -84,6 +84,7 @@ export default {
       axios.get(hotelsUrl)
         .then((res) => {
           that.hotels = res.data
+          console.log(res.data)
         })
     },
     addHotel () {
