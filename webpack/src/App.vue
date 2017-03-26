@@ -12,11 +12,13 @@
 
 <script>
 import HotelIndex from './components/HotelIndex'
+import HotelDetail from './components/HotelDetail'
 
 export default {
   name: 'app',
   components: {
-    HotelIndex
+    HotelIndex,
+    HotelDetail
   }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div>
+      <h2>Hotel Details</h2>
       <div>{{ hotel.name }}</div>
       <div>{{ hotel.address }}</div>
       <div>{{ hotel.phone }}</div>
@@ -15,15 +16,20 @@ const hotelUrl = (id) => {
   return apiUrl + '/hotels/' + id
 }
 export default {
-  name: 'hotel',
+  name: 'hotel-detail',
   props: ['hotel'],
   data () {
-    return {}
+    return {
+      hotel: null
+    }
+  },
+  created () {
+    this.showHotel()
   },
   methods: {
     showHotel () {
       var that = this
-      axios.get(hotelUrl(that.hotel.id))
+      axios.get(hotelUrl(this.$route.params.id))
       .then((res) => {
         that.hotel = res.data
       }).catch((error) => {

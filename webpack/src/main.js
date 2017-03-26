@@ -9,9 +9,9 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
-    { path: '/', component: App },
+    { path: '/', component: HotelIndex },
     { path: '/hotels', component: HotelIndex },
-    { name: 'hotel', path: '/hotel/:id', component: HotelDetail },
+    { name: 'hotel', path: '/hotels/:id', component: HotelDetail },
     { path: '*', redirect: '/' }
   ]
 })
